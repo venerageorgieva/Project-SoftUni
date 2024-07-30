@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+.aboutContainer {
+  background-image: url("/images/Choosing-a-Pediatrician.jpeg");
+  width: 100%;
+  height: 50rem;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:center;
+}
+
+.aboutContainer h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 4rem;
+  padding-top: 2rem;
+  font-size: 2rem;
+  color: rgb(99, 96, 96);
+}
+
+.aboutContainer article p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: "Raleway";
+  background-color: rgb(170, 195, 242);
+  text-overflow: unset;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  margin: 3rem;
+  border-radius: 20px;
+}
