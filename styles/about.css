@@ -1,34 +1,69 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 .aboutContainer {
-  background-image: url("/images/Choosing-a-Pediatrician.jpeg");
-  width: 100%;
-  height: 50rem;
+
   background-size:cover;
   background-repeat: no-repeat;
   background-position:center;
 }
 
-.aboutContainer h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right: 4rem;
-  padding-top: 2rem;
-  font-size: 2rem;
-  color: rgb(99, 96, 96);
+.aboutContainer img {
+  margin: 1rem;
+  width: 40rem;
 }
 
-.aboutContainer article p {
+.top-article{ 
+  font-size: 2rem;
   display: flex;
   justify-content: center;
-  text-align: center;
+  flex-direction: row;
+   text-align: center;
   font-size: 1.3rem;
   font-family: "Raleway";
-  background-color: rgb(170, 195, 242);
-  text-overflow: unset;
-  padding-left: 6rem;
-  padding-right: 6rem;
-  margin: 3rem;
-  border-radius: 20px;
+  background-color: rgb(201, 219, 250); 
+}
+
+.first-info-box{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.center-article{
+  display: flex;
+ flex-direction: row;
+ align-items: center;
+  font-size: 1.3rem;
+  font-family: "Raleway";
+  padding-left: 1rem;
+  
+}
+
+.second-info-box{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bottom-article{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-family: "Raleway";
+  padding-left: 1rem;
+
+}
+
+.third-info-box{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 50rem;
+  background-color: rgb(201, 219, 250);
+  margin: 4rem;
+  padding: 1rem;
 }
