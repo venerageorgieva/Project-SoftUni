@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PediatricianPlus</title>
+    <link href="styles/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <img src="images/logo.png" alt="" />
+        <h1 class="">PediatricianPlus</h1>
+
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="ourMission.html">Our Mission</a>
+
+        <div class="side-menu">
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+          <a href="logout">Logout</a>
+        </div>
+      </nav>
+    </header>
+    <div class="login-form">
+   <h1>Login</h1>
+    <form class="login-details">
     
-</body>
+      <div>
+        <label htmlFor="email">Email:</label> <br>
+        <input type="text" id="email" name="email" />
+
+        <!-- <p class={styles.errorMessage}>{errors.age}</p> -->
+      </div>
+
+      <div>
+        <label htmlFor="password">Password:</label> <br>
+        <input type="password" id="password" name="password" />
+      </div>
+   
+      <div >
+        <button class="button" type="submit">Register</button>
+      </div>
+    </form>
+    </div>
+ 
+    <footer>
+      <p>&copy;All rights reserved.Designed by Venera Georgieva.</p>
+    </footer>
+  </body>
 </html>

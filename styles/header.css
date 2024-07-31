@@ -14,7 +14,7 @@
 }
 
 .nav-bar img {
-  height: ;
+  height:5rem ;
 }
 
 h1 {
@@ -39,7 +39,7 @@ a:hover {
   color: antiquewhite;
 }
 
-.login-register-logout {
+.side-menu {
   display: flex;
   flex-direction: row;
   align-items: center;

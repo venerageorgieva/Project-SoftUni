@@ -1,24 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-.login-form {
+.register-form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.login-form h1 {
+.register-form h1 {
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
 
-.login-form {
-    padding-top: 6rem;
+.register-form {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
   font-family: "Raleway";
-  margin-bottom:2rem;
-  align-items: center;
 
 }
 
@@ -37,16 +34,16 @@
   border-radius: 10px;
   cursor: pointer;
 }
-.login-form input {
+.register-form input {
   margin: 0.3rem;
   width: 15rem;
 }
 
-.login-details{
+.form-details{
     padding: 3rem;
-    height: 12rem;
+    height: 23.7rem;
     justify-content: left;
     background-color: rgb(201, 219, 250);
-    margin-bottom: 12rem;
+    margin-bottom: 7rem;
    
 }
