@@ -80,4 +80,48 @@
   border-radius: 10px;
   cursor: pointer;
   border-style: solid;
+  margin-left: 12rem;
+  border-color:rgb(201, 219, 250);
+;
+}
+
+.buttons{
+  display: flex;
+justify-content: center;
+}
+
+.edit-button{
+  text-decoration: none;
+  color: black;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-family: "Raleway";
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  cursor: pointer;
+  border-style: solid;
+  border-color: #ccc;
+  margin-right: 1rem;
+  border-color:  rgb(201, 219, 250);
+
+}
+
+.delete-button{
+  text-decoration: none;
+  color: black;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-family: "Raleway";
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  cursor: pointer;
+  border-style: solid;
+  border-color:  rgb(201, 219, 250);
+  
 }

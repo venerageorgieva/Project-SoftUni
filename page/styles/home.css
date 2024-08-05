@@ -28,3 +28,95 @@
     text-align: center;
 
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+.our-mission{
+    font-size: 2.5rem;
+    font-family:"Raleway" ;
+    font-weight: 600;
+display: flex;
+justify-content: center;
+margin: 2rem;
+margin-top: 3rem;
+
+}
+
+.programs-first-container article img{
+    width: 8rem;
+    border-radius: 10px;
+   
+}
+
+.programs-first-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    flex-direction: column;
+}
+
+.programs-first-container article{
+    text-align: center;
+    width: 20rem;
+    
+}
+.programs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+}
+
+.programs article{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2rem;
+}
+
+.programs-second-container article img{
+    width: 8rem;
+    border-radius: 10px;
+    
+}
+
+
+
+.programs-second-container article{
+    width: 20rem;
+}
+
+.programs-second-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    flex-direction: column;
+}
+
+
+
+.wrap-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    border-color: black;
+    border-style:double;
+    font-family: 'Raleway';
+    margin-bottom:3rem ;
+    background-color: rgb(201, 219, 250);
+   
+}
+
+.wrap-container p{
+    padding-left: 2rem;
+}
+
+.wrapper{
+    height: 39rem;
+}
+
