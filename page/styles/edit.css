@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-.create-form {
+.edit-form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.create-form h1 {
+.edit-form h1 {
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
 
-.create-form {
+.edit-form {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
@@ -21,7 +21,7 @@
 }
 
 
-.form-create-button {
+.form-edit-button {
   margin-top: 1rem;
   margin-left: 7.3rem;
   margin-bottom: 2rem;
@@ -35,10 +35,8 @@
   border-radius: 10px;
   cursor: pointer;
 }
-.create-form input {
+.edit-form input {
   margin: 0.3rem;
-  width: 15rem;
-  font-size: 1rem;
   width: 26rem;
   font-size: 1rem;
 }
@@ -60,4 +58,5 @@ textarea {
     border-radius: 4px;
     background-color: #f8f8f8;
     resize: none;
+    font-size: 0.8rem;
   }
