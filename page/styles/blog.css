@@ -67,6 +67,7 @@
 }
 
 .search-term {
+  font-size: 1rem;
   border: 3px solid rgb(201, 219, 250);
   border-radius: 10px;
   width: 18rem;
@@ -74,7 +75,7 @@
 }
 
 .search-term:focus {
-  color: #bee7ed;
+  color: #1a1c1c;
 }
 
 .search-button {
@@ -86,7 +87,7 @@
    
     margin-bottom: 1rem;
   padding: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-family: "Raleway";
     background-color: blanchedalmond;
     border-radius: 10px;

@@ -1,4 +1,4 @@
-.details-container{
+.details-container {
   display: flex;
   justify-content: center;
 }
@@ -14,36 +14,34 @@
   border-color: rgb(201, 219, 250);
   border-radius: 20px;
   box-shadow: 5px 5px 5px 0px rgb(202, 195, 195);
-  width:50rem;
-  height:max-content
+  width: 50rem;
+  height: max-content;
 }
 
-.details-box h2{
+.details-box h2 {
   margin: 1rem;
 }
 
-.details-box h1{
+.details-box h1 {
   margin: 1rem;
 }
-.details-box p{
-  margin: 2rem
-  ;
+.details-box p {
+  margin: 2rem;
 }
 
-.details-box img{
+.details-box img {
   border-radius: 10px;
   max-height: fit-content;
   max-height: fit-content;
 }
 
-.comments-section{
+.comments-section {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.comments-section li{
-
+.comments-section li {
   margin: 1rem;
   background-color: rgb(201, 219, 250);
   padding: 2rem;
@@ -51,15 +49,14 @@
   border-radius: 5px;
 }
 
-.add-comment-section{
+.add-comment-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2rem;
-
 }
 
-.add-comment-section textarea{
+.add-comment-section textarea {
   width: 100%;
   height: 150px;
   padding: 12px 20px;
@@ -70,20 +67,17 @@
   resize: none;
 }
 
-.add-comment-section input{
+.add-comment-section input {
   text-decoration: none;
   color: black;
   margin-top: 1rem;
   margin-bottom: 2rem;
- 
   margin-bottom: 1rem;
- padding: 1rem;
+  padding: 1rem;
   font-size: 1.1rem;
   font-family: "Raleway";
   background-color: blanchedalmond;
   border-radius: 10px;
   cursor: pointer;
   border-style: solid;
- 
 }
-
