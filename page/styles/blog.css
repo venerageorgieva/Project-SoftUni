@@ -96,3 +96,11 @@
     border-color:  rgb(201, 219, 250);
 
 }
+
+.all-posts{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
