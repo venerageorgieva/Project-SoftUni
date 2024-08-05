@@ -1,4 +1,17 @@
+import { useEffect, useState } from "react"
+import * as postService from "../../services/postService.js"
+import BlogPostItem from "./blog-post-item/BlogPostItem.jsx";
+
 export default function Blog(){
+  const[posts,setPosts] = useState([]);
+
+  useEffect(()=>{
+    postService.getAll()
+    .then(result => setPosts(result));
+    
+},[]);
+
+
     return(
         <>
                 <div className="blog-title">
@@ -17,18 +30,16 @@ export default function Blog(){
       </div>
   
       <div className="all-posts">
-         <div className="blog-posts">
-        <article className="post">
-          <h2>Article written by: Dr. Veselin Atanasov</h2>
-          <h1>Expert Pediatrics Health Tips for Your Child's Well-Being</h1>
-          <img src="./images/childWell-Being.jpg" alt="" />
-  
-          <a href="/page/details.html">Details</a>
-        </article>
+         {posts.map(posted => (
+        <BlogPostItem key={posted._id} {...posted} />
+     ))}
+
+     {posts.length === 0 && (
+                <h3 className="no-articles">No articles yet</h3>
+ ) }
       </div>
-      
-  
-      </div>
+    
+
         </>
 
     )
