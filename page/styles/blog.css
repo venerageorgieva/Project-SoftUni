@@ -1,4 +1,4 @@
-.forum-posts{
+.blog-posts{
     margin: 2rem;
     display: flex;
 text-align:left;
@@ -10,12 +10,12 @@ box-shadow: 5px 5px 5px 0px rgb(202, 195, 195);
 
 }
 
-.forum-posts h2{
+.blog-posts h2{
     padding-left: 0.5rem;
   
 }
 
-.forum-posts h1{
+.blog-posts h1{
     padding-left: 0.4rem;
 }
 
@@ -51,12 +51,12 @@ box-shadow: 5px 5px 5px 0px rgb(202, 195, 195);
     border-right-color: rgb(97, 94, 94)
 }
 
-.forum-title{
+.blog-title{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.forum-title{
+.blog-title{
     font-size: larger;
 }
