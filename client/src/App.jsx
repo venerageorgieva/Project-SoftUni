@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
+// import * as authService from "./services/authService.js";
+// import AuthContext from "./contexts/authContext.js";
+import Path from "./paths.js";
+
+import Header from "./components/header/Header.jsx";
+import Home from "./components/home/Home.jsx";
+import Footer from "./components/footer/Footer.jsx";
+import About from "./components/about/About.jsx";
+import Blog from "./components/blog/Blog.jsx";
+// import GameCreate from "./components/game-create/GameCreate.jsx";
+// import Login from "./components/login/Login.jsx";
+// import Logout from "./components/logout/Logout.jsx";
+// import Register from "./components/register/Register.jsx";
+// import GameDetails from "./components/game-details/GameDetails.jsx";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
+    // <AuthContext.Provider value={values}>
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <Routes>
+        <Route path={Path.Home} element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/blog' element={<Blog />} />
+      </Routes>
+      <Footer />
     </>
-  )
+
+    //  {/* </AuthContext.Provider> */}
+  );
 }
 
-export default App
+export default App;
