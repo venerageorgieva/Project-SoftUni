@@ -1,62 +1,95 @@
-.blog-posts{
-    margin: 2rem;
-    display: flex;
-text-align:left;
+.blog-posts {
+  margin: 2rem;
+  display: flex;
+  text-align: left;
   font-size: 1rem;
   width: 30rem;
-background-color: rgb(201, 219, 250);
-border-radius: 20px;
-box-shadow: 5px 5px 5px 0px rgb(202, 195, 195);
-
+  background-color: rgb(201, 219, 250);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 0px rgb(202, 195, 195);
 }
 
-.blog-posts h2{
-    padding-left: 0.5rem;
-  
+.blog-posts h2 {
+  padding-left: 0.5rem;
 }
 
-.blog-posts h1{
-    padding-left: 0.4rem;
+.blog-posts h1 {
+  padding-left: 0.4rem;
 }
 
-
-.post img{
-    display: flex;
-    width: 23rem;
-    padding: 1rem;
-    margin-left: 3rem;
-    margin-bottom: 2rem;
+.post img {
+  display: flex;
+  width: 23rem;
+  padding: 1rem;
+  margin-left: 3rem;
+  margin-bottom: 2rem;
 }
 
-.post a{
+.post a {
+  text-decoration: none;
+  color: black;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-left: 8rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  font-size: 1.1rem;
+  font-family: "Raleway";
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  cursor: pointer;
+  border-style: solid;
+  border-top-color: lightgrey;
+  border-left-color: lightgrey;
+  border-bottom-color: rgb(97, 94, 94);
+  border-right-color: rgb(97, 94, 94);
+}
+
+.blog-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap {
+  display: flex;
+  justify-content: center;
+}
+.blog-title {
+  font-size: larger;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search-term {
+  border: 3px solid rgb(201, 219, 250);
+  border-radius: 10px;
+  width: 18rem;
+  height: 3rem;
+}
+
+.search-term:focus {
+  color: #bee7ed;
+}
+
+.search-button {
     text-decoration: none;
     color: black;
     margin-top: 1rem;
     margin-bottom: 2rem;
-    margin-left: 8rem;
+    margin-left: 0.2rem;
+   
     margin-bottom: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    font-size: 1.1rem;
+  padding: 0.5rem;
+    font-size: 0.9rem;
     font-family: "Raleway";
     background-color: blanchedalmond;
     border-radius: 10px;
     cursor: pointer;
     border-style: solid;
-    border-top-color: lightgrey;
-    border-left-color:lightgrey ;
-    border-bottom-color: rgb(97, 94, 94);
-    border-right-color: rgb(97, 94, 94)
-}
-
-.blog-title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.blog-title{
-    font-size: larger;
 }
