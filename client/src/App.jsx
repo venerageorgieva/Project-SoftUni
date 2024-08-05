@@ -10,10 +10,10 @@ import Home from "./components/home/Home.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import About from "./components/about/About.jsx";
 import Blog from "./components/blog/Blog.jsx";
-// import GameCreate from "./components/game-create/GameCreate.jsx";
-// import Login from "./components/login/Login.jsx";
+import CreatePost from "./components/create-post/CreatePost.jsx";
+import Login from "./components/login/Login.jsx";
+import Register from "./components/register/Register.jsx";
 // import Logout from "./components/logout/Logout.jsx";
-// import Register from "./components/register/Register.jsx";
 // import GameDetails from "./components/game-details/GameDetails.jsx";
 function App() {
   return (
