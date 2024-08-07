@@ -20,7 +20,7 @@ export default function Header() {
           <>
             <Link to='/create-post'>Create Post</Link>
             <div className='side-menu'>
-              <span>Welcome,Dr. {username}</span>
+              <span>Welcome, {username}</span>
               <Link to='/logout'>Logout</Link>
             </div>
           </>
