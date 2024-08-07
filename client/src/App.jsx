@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 import * as authService from "./services/authService.js";
-import AuthContext from "./contexts/authContext.js";
 import Path from "./paths.js";
+import AuthContext from "./contexts/authContext.js"
 
 import Header from "./components/header/Header.jsx";
 import Home from "./components/home/Home.jsx";
@@ -62,7 +62,7 @@ function App() {
           <Route path='/blog' element={<Blog />} />
           <Route path='/create-post' element={<CreatePost />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/posts/:post' element={<PostDetails />} />
+          <Route path='/posts/:postId' element={<PostDetails />} />
           <Route path='/register' element={<Register />} />
           <Route path={Path.Logout} element={<Logout />} />
         </Routes>

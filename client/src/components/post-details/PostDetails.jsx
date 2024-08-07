@@ -5,16 +5,19 @@ import * as commentService from "../../services/commentService";
 import AuthContext from "../../contexts/authContext.js";
 
 export default function PostDetails(){
-    const {email} =useContext(AuthContext)
+    const {email} = useContext(AuthContext)
     const [post, setPost] = useState({});
     const [comments, setComments] = useState([]);
     const { postId } = useParams();
+    console.log({postId});
+    
   
     useEffect(() => {
       postService.getOne(postId).then(setPost);
       commentService.getAll(postId).then(setComments);
     }, [postId]);
-  
+
+      
     const addCommentHandler = async (e) => {
       e.preventDefault();
   
@@ -34,10 +37,10 @@ export default function PostDetails(){
        
         <div className="details-container">
         <div className="details-box">
-          <img src="/page/images/childWell-Being.jpg" alt="" />
-          <h2>Article written by:{post.email}</h2>
-          <h1>{post.title}</h1>
-          <p>
+          <img name="imageUrl" src={post.imageUrl} alt="" />
+          <h2>Article written by: {post.author}</h2>
+          <h1 name='title'>{post.title}</h1>
+          <p name='text'>
           {post.text}
           </p>
   
