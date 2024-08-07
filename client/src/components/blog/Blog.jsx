@@ -13,7 +13,7 @@ export default function Blog(){
 
 
     return(
-        <>
+        <div className="blog-container">
                 <div className="blog-title">
         <h1>Blog</h1>
       </div>
@@ -40,7 +40,7 @@ export default function Blog(){
       </div>
     
 
-        </>
+        </div>
 
     )
 }

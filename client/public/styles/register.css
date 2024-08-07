@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 .register-form {
+  margin-top: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +9,7 @@
 
 .register-form h1 {
   margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 
 .register-form {
@@ -16,12 +17,11 @@
   justify-content: center;
   margin-top: 2rem;
   font-family: "Raleway";
-
+  margin-bottom: 12.5rem;
 }
 
-
 .button {
-  margin-top: 1rem;
+  
   margin-left: 1.1rem;
   margin-bottom: 2rem;
   padding-top: 1rem;
@@ -39,11 +39,11 @@
   width: 15rem;
 }
 
-.form-details{
-    padding: 3rem;
-    height: 23.7rem;
-    justify-content: left;
-    background-color: rgb(201, 219, 250);
-    margin-bottom: 7rem;
-   
+.register-details {
+  margin-bottom: 7rem;
+  padding: 3rem;
+  height: 15rem;
+  justify-content: left;
+  background-color: rgb(201, 219, 250);
+  margin-bottom: 3rem;
 }

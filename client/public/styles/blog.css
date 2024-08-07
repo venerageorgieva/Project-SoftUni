@@ -7,6 +7,7 @@
   background-color: rgb(201, 219, 250);
   border-radius: 20px;
   box-shadow: 5px 5px 5px 0px rgb(202, 195, 195);
+  font-size: 0.7rem;
 }
 
 .blog-posts h2 {
@@ -19,13 +20,15 @@
 
 .post img {
   display: flex;
-  width: 23rem;
+  width: 20rem;
+  height: 14rem;
   padding: 1rem;
   margin-left: 3rem;
   margin-bottom: 2rem;
 }
 
 .post a {
+  
   text-decoration: none;
   color: black;
   margin-top: 1rem;
@@ -103,4 +106,6 @@
   flex-wrap: wrap;
 }
 
-
+.blog-container{
+  margin-bottom: 8.5rem;
+}

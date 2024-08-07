@@ -19,7 +19,7 @@ export default function Register() {
   return (
     <div className='register-form'>
       <h1>Register</h1>
-      <form className='form-details' onSubmit={onSubmit}>
+      <form className='register-details' onSubmit={onSubmit}>
    
         <div>
           <label htmlFor='email'>Email:</label> <br />
@@ -46,7 +46,7 @@ export default function Register() {
         <div>
           <label htmlFor='confirm-password'>Confirm password:</label> <br />
           <input
-            type='-password'
+            type='password'
             id='confirm-password'
             name='confirm-password'
             onChange={onChange}
