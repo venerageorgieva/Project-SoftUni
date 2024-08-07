@@ -4,11 +4,11 @@ import * as postService from "../../services/postService.js";
 export default function CreatePost() {
   const navigate = useNavigate();
   const createPostHandler = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     const postData = Object.fromEntries(new FormData(e.currentTarget));
     try {
       await postService.create(postData);
-      navigate("/posts");
+      navigate("/blog");
     } catch (err) {
       // Error notification
       console.log(err);
