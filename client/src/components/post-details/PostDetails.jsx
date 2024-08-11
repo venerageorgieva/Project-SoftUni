@@ -3,18 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import * as postService from "../../services/postService.js";
 import * as commentService from "../../services/commentService";
 import AuthContext from "../../contexts/authContext.js";
+import reducer from "./commentReducer.js";
 
-const reducer = (state, action) => {
-  switch (action?.type) {
-    case "GET_ALL_POSTS":
-      return [...action.payload];
- case "ADD_COMMENT":
-  return [...state,action.payload]
-
-    default:
-      return state;
-  }
-};
 
 export default function PostDetails() {
   const { email } = useContext(AuthContext);
@@ -26,7 +16,7 @@ export default function PostDetails() {
     postService.getOne(postId).then(setPost);
     commentService.getAll(postId).then((result) => {
       dispatch({
-        type: "GET_ALL_POSTS",
+        type: "GET_ALL_COMMENTS",
         payload: result,
       });
     });
@@ -79,7 +69,7 @@ export default function PostDetails() {
       <div className='comments-section'>
         <h3>Comments:</h3>
         <ul>
-          {comments.map(({ _id, text, owner:{email}}) => (
+          {comments.map(({ _id, text, owner: { email } }) => (
             <li key={_id} className='comment' name='comment'>
               <p>
                 {email}:{text}
