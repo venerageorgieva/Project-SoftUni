@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import AuthContext from "../../contexts/authContext.js";
 
 export default function Header() {
-  const { isAuthenticated, username } = useContext(AuthContext);
-
+  const {isAuthenticated, email } = useContext(AuthContext);
+ 
   return (
     <header>
       <nav className='nav-bar'>
@@ -20,7 +20,7 @@ export default function Header() {
           <>
             <Link to='/create-post'>Create Post</Link>
             <div className='side-menu'>
-              <span>Welcome, {username}</span>
+              <span>Welcome, {email}</span>
               <Link to='/logout'>Logout</Link>
             </div>
           </>
