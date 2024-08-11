@@ -5,9 +5,8 @@ import * as commentService from "../../services/commentService";
 import AuthContext from "../../contexts/authContext.js";
 import reducer from "./commentReducer.js";
 
-
 export default function PostDetails() {
-  const { email } = useContext(AuthContext);
+  const { email, userId } = useContext(AuthContext);
   const [post, setPost] = useState({});
   const [comments, dispatch] = useReducer(reducer, []);
   const { postId } = useParams();
@@ -38,6 +37,8 @@ export default function PostDetails() {
       payload: newComment,
     });
   };
+
+
   return (
     <>
       <div className='details-container'>
@@ -47,14 +48,16 @@ export default function PostDetails() {
           <h1 name='title'>{post.title}</h1>
           <p name='text'>{post.text}</p>
 
-          <div className='buttons'>
-            <Link to='/:postId/edit-post' className='edit-button'>
-              Edit
-            </Link>
-            <Link to='/blog' className='delete-button'>
-              Delete
-            </Link>
-          </div>
+          {userId === post._ownerId && (
+            <div className='buttons'>
+              <Link to='/:postId/edit-post' className='edit-button'>
+                Edit
+              </Link>
+              <Link to='/blog' className='delete-button'>
+                Delete
+              </Link>
+            </div>
+          )}
         </div>
       </div>
 
