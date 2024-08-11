@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import * as postService from '../../services/postService.js'
 import * as commentService from "../../services/commentService";
 import AuthContext from "../../contexts/authContext.js";
@@ -45,8 +45,8 @@ export default function PostDetails(){
           </p>
   
       <div className="buttons">
-          <a href="/page/edit.html" className="edit-button">Edit</a>
-          <a href="/page/blog.html" className="delete-button">Delete</a>
+          <Link to='/:postId/edit-post' className="edit-button">Edit</Link>
+          <Link to="/blog" className="delete-button">Delete</Link>
       </div>
   
         </div>

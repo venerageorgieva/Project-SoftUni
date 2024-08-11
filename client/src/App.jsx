@@ -3,7 +3,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 
 import * as authService from "./services/authService.js";
 import Path from "./paths.js";
-import AuthContext from "./contexts/authContext.js"
+import AuthContext from "./contexts/authContext.js";
 
 import Header from "./components/header/Header.jsx";
 import Home from "./components/home/Home.jsx";
@@ -15,6 +15,10 @@ import Login from "./components/login/Login.jsx";
 import Register from "./components/register/Register.jsx";
 import Logout from "./components/logout/Logout.jsx";
 import PostDetails from "./components/post-details/PostDetails.jsx";
+import EditPost from "./components/edit-post/EditPost.jsx";
+
+import AuthGuard from "./components/guards/AuthGuard.jsx";
+
 function App() {
   const navigate = useNavigate();
   const [auth, setAuth] = useState(() => {
@@ -60,11 +64,12 @@ function App() {
           <Route path={Path.Home} element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/blog' element={<Blog />} />
-          <Route path='/create-post' element={<CreatePost />} />
+          <Route path='/create-post' element={<AuthGuard><CreatePost /></AuthGuard>} />
           <Route path='/login' element={<Login />} />
           <Route path='/posts/:postId' element={<PostDetails />} />
           <Route path='/register' element={<Register />} />
           <Route path={Path.Logout} element={<Logout />} />
+          <Route path='/:postId/edit-post' element={<AuthGuard><EditPost /> </AuthGuard>} />
         </Routes>
         <Footer />
       </>
