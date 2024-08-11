@@ -1,19 +1,35 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useReducer, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import * as postService from "../../services/postService.js";
 import * as commentService from "../../services/commentService";
 import AuthContext from "../../contexts/authContext.js";
+
+const reducer = (state, action) => {
+  switch (action?.type) {
+    case "GET_ALL_POSTS":
+      return [...action.payload];
+ case "ADD_COMMENT":
+  return [...state,action.payload]
+
+    default:
+      return state;
+  }
+};
+
 export default function PostDetails() {
-  const { user } = useContext(AuthContext);
+  const { email } = useContext(AuthContext);
   const [post, setPost] = useState({});
-  const [comments, setComments] = useState([]);
+  const [comments, dispatch] = useReducer(reducer, []);
   const { postId } = useParams();
-  console.log(comments);
-  
 
   useEffect(() => {
     postService.getOne(postId).then(setPost);
-    commentService.getAll(postId).then(setComments);
+    commentService.getAll(postId).then((result) => {
+      dispatch({
+        type: "GET_ALL_POSTS",
+        payload: result,
+      });
+    });
   }, [postId]);
 
   const addCommentHandler = async (e) => {
@@ -25,8 +41,12 @@ export default function PostDetails() {
       postId,
       formData.get("comment")
     );
-    
-    setComments((state) => [...state, { ...newComment, author: { user } }]);
+
+    newComment.owner = { email };
+    dispatch({
+      type: "ADD_COMMENT",
+      payload: newComment,
+    });
   };
   return (
     <>
@@ -61,7 +81,8 @@ export default function PostDetails() {
         <ul>
           {comments.map(({ _id, text, owner:{email}}) => (
             <li key={_id} className='comment' name='comment'>
-              <p>{email}:{text}
+              <p>
+                {email}:{text}
               </p>
             </li>
           ))}
