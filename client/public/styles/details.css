@@ -109,6 +109,10 @@ justify-content: center;
 
 }
 
+.edit-button:hover{
+  color: black;
+}
+
 .delete-button{
   text-decoration: none;
   color: black;
