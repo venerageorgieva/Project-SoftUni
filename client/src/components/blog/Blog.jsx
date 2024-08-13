@@ -31,7 +31,7 @@ export default function Blog() {
             }}
           />
         </div>
-        
+
       <div className='wrap'>
   
 
@@ -42,6 +42,10 @@ export default function Blog() {
               } else if (
                 value.author.toLowerCase().includes(searchItem.toLowerCase())
               ) {
+                return value;
+              }else if(
+                value.title.toLowerCase().includes(searchItem.toLowerCase())
+              ){
                 return value;
               }
             }).map((posted) => (
