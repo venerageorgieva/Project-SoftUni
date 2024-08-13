@@ -37,14 +37,19 @@ export default function Blog() {
         <div className='all-posts'>
         {posts.filter((value) => {
               if (searchItem == "") {
+                console.log(value);
                 return value;
+                
               } else if (
                 value.author.toLowerCase().includes(searchItem.toLowerCase())
               ) {
+                console.log(value);
                 return value;
               }else if(
                 value.title.toLowerCase().includes(searchItem.toLowerCase())
               ){
+                console.log(value);
+                
                 return value;
               }
             }).map((posted) => (
@@ -58,7 +63,7 @@ export default function Blog() {
           <BlogPostItem key={posted._id} {...posted} />
         ))} */}
 
-        {posts.length === 0 && <h3 className='no-articles'>No articles yet</h3>}
+        {posts.length === 0 && <h3 className='no-articles'>No articles yet.</h3>}
       </div>
     </div>
   );
