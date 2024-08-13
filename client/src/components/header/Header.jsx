@@ -13,9 +13,9 @@ export default function Header() {
           <h1 className=''>PediatricianPlus</h1>
         </Link>
 
-        <a href='/'>Home</a>
+        <Link to='/'>Home</Link>
         <Link to='/about'>About</Link>
-        <Link to='/blog'>Blog</Link>
+        <Link to='/posts'>Blog</Link>
         {isAuthenticated && (
           <>
             <Link to='/create-post'>Create Post</Link>

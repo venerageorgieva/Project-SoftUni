@@ -8,7 +8,7 @@ export default function CreatePost() {
     const postData = Object.fromEntries(new FormData(e.currentTarget));
     try {
       await postService.create(postData);
-      navigate("/blog");
+      navigate("/posts");
     } catch (err) {
       // Error notification
       console.log(err);
