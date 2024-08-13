@@ -1,18 +1,24 @@
 import { useContext, useEffect, useReducer, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import * as postService from "../../services/postService.js";
 import * as commentService from "../../services/commentService";
 import AuthContext from "../../contexts/authContext.js";
+import useForm from "../../hooks/useForm.js";
 import reducer from "./commentReducer.js";
+import { pathToUrl } from "../../utils/pathUtils.js";
+import Path from "../../paths.js";
 
 export default function PostDetails() {
   const { email, userId } = useContext(AuthContext);
   const [post, setPost] = useState({});
   const [comments, dispatch] = useReducer(reducer, []);
   const { postId } = useParams();
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     postService.getOne(postId).then(setPost);
+
     commentService.getAll(postId).then((result) => {
       dispatch({
         type: "GET_ALL_COMMENTS",
@@ -21,24 +27,34 @@ export default function PostDetails() {
     });
   }, [postId]);
 
-  const addCommentHandler = async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(e.currentTarget);
-
-    const newComment = await commentService.create(
-      postId,
-      formData.get("comment")
-    );
+  const addCommentHandler = async (values) => {
+    const newComment = await commentService.create(postId, values.comment);
 
     newComment.owner = { email };
+
     dispatch({
       type: "ADD_COMMENT",
       payload: newComment,
     });
   };
 
+  const deleteButtonClickHandler = async () => {
+   const hasConfirmed = confirm(`Are you sure you want to delete this post -> "${post.title}"`);
+  
+   if(hasConfirmed){
+   await postService.remove(postId);
 
+
+   navigate('/posts')
+   }
+  }
+
+  
+  const { values, onChange, onSubmit } = useForm(addCommentHandler, 
+    {comment:''}
+  );
+
+ 
   return (
     <>
       <div className='details-container'>
@@ -50,12 +66,14 @@ export default function PostDetails() {
 
           {userId === post._ownerId && (
             <div className='buttons'>
-              <Link to='/:postId/edit-post' className='edit-button'>
+              <Link
+                to={pathToUrl(Path.PostEdit, { postId })}
+                className='edit-button'>
                 Edit
               </Link>
-              <Link to='/blog' className='delete-button'>
-                Delete
-              </Link>
+            
+              <button className='edit-button' onClick={deleteButtonClickHandler}>Delete</button>
+              
             </div>
           )}
         </div>
@@ -63,8 +81,8 @@ export default function PostDetails() {
 
       <div className='add-comment-section'>
         <h2>Add comment:</h2>
-        <form onSubmit={addCommentHandler}>
-          <textarea name='comment' placeholder='Type here...'></textarea>
+        <form onSubmit={onSubmit}>
+          <textarea name='comment' onChange={onChange} placeholder='Type here...'></textarea>
           <input type='submit' />
         </form>
       </div>
