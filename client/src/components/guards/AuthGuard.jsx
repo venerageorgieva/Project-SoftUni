@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate,Outlet } from "react-router-dom";
 import AuthContext from "../../contexts/authContext.js";
 
 export default function AuthGuard(props){
@@ -9,9 +9,6 @@ export default function AuthGuard(props){
     return <Navigate to="/login" />;
   }
 
-  return (
-    <>
-    {props.children}
-    </>
-  )
+  return <Outlet/>;
+
 }

@@ -18,6 +18,7 @@ import PostDetails from "./components/post-details/PostDetails.jsx";
 import EditPost from "./components/edit-post/EditPost.jsx";
 
 import AuthGuard from "./components/guards/AuthGuard.jsx";
+import ErrorBoundary from "./components/ErrorBoundary.jsx";
 
 function App() {
   const navigate = useNavigate();
@@ -58,23 +59,29 @@ function App() {
     isAuthenticated: !!auth.accessToken,
   };
   return (
+    <ErrorBoundary>
     <AuthContext.Provider value={values}>
       <>
         <Header />
         <Routes>
           <Route path={Path.Home} element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/blog' element={<Blog />} />
-          <Route path='/create-post' element={<AuthGuard><CreatePost /></AuthGuard>} />
+          <Route path='/posts' element={<Blog />} />
           <Route path='/login' element={<Login />} />
           <Route path='/posts/:postId' element={<PostDetails />} />
           <Route path='/register' element={<Register />} />
+
+          <Route element={<AuthGuard />}>
+          <Route path='/create-post' element={<CreatePost />}/>
+          <Route path={Path.PostEdit} element={<EditPost />} />
           <Route path={Path.Logout} element={<Logout />} />
-          <Route path='/:postId/edit-post' element={<AuthGuard><EditPost /> </AuthGuard>} />
+
+          </Route>
         </Routes>
         <Footer />
       </>
     </AuthContext.Provider>
+    </ErrorBoundary>
   );
 }
 
