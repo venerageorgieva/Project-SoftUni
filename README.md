@@ -1,10 +1,9 @@
 <img width="1440" alt="logged-home" src="https://github.com/user-attachments/assets/e880fc3f-95c9-4e81-b1dc-786e924be671"># Project-SoftUni
 Application made with ReactJS
 
-<<<<<<< HEAD
-=======
+
 To start the project :
->>>>>>> 141856c2f3ef0cd2a98b5cf282217092144210ee
+
 1. Open the client folder in the terminal and run command -->
 npm run dev.
 
@@ -15,11 +14,8 @@ node server.js.
 http://localhost:5173/
 
 Introduction to the App:
-<<<<<<< HEAD
-1.registration
+1.Registration
  
-=======
-
 1.Registration - registrate to gain user functionalities.
 <img width="1440" alt="registration" src="https://github.com/user-attachments/assets/ac96c8ba-f045-43df-896e-76056a5676c1">
 2.Login
