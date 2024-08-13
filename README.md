@@ -24,7 +24,7 @@ Go to the Create Post page by clicking the create post button on the navigation 
 After creating a post you will be able to see it in the blog.
 <img width="1440" alt="blog-page" src="https://github.com/user-attachments/assets/8d6490ff-80fe-4b1a-8c2d-a4723d33a192">
 
-5. Post
+5.Post
    
 As a creator of the post you can edit or delete it.
 
@@ -50,6 +50,7 @@ You can use the search bar to search for your own posts or other Doctor's posts.
 <img width="1440" alt="search-bar" src="https://github.com/user-attachments/assets/55cc66cc-adfd-46be-8aab-947533f9c4d7">
 
 8.Pages and designs
+
 Home.
 <img width="1440" alt="logged-home" src="https://github.com/user-attachments/assets/57331774-dcf3-410c-b98d-2c6db0eb7502">
 <img width="1440" alt="home-2" src="https://github.com/user-attachments/assets/02ef8140-920c-4581-8ca3-e1b61b396017">
