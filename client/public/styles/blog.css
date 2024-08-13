@@ -53,6 +53,7 @@
 }
 
 .blog-title {
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,12 +68,14 @@
 
 .search {
   display: flex;
+  margin-top: 1rem;
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
 .search-term {
+  padding-left: 0.5rem;
   font-size: 1rem;
   border: 3px solid rgb(201, 219, 250);
   border-radius: 10px;

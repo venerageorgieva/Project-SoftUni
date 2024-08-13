@@ -12,7 +12,6 @@ export default function Blog() {
   }, []);
 
   const [searchItem, setSearchItem] = useState("");
-  console.log(posts);
   
 
   return (
