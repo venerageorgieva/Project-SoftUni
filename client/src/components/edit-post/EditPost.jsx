@@ -1,6 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
 import * as postService from "../../services/postService.js";
-import useForm from "../../hooks/useForm.js";
 import { useEffect, useState } from "react";
 
 export default function EditPost() {

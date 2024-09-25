@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import * as postService from "../../services/postService.js";
-import BlogPostItem from "./blog-post-item/BlogPostItem.jsx";
-import { Link } from "react-router-dom";
+
 import SearchItem from "./blog-post-item/SearchItem.jsx";
 
 export default function Blog() {
